@@ -277,7 +277,9 @@
           $('#xinwen .thumbnail').eq(x).find('h3').html(ele.name)
           $('#xinwen .thumbnail').eq(x).find('p').html(ele.short_description_html)
           $('#xinwen .thumbnail').eq(x).find('span').html(ele.date_created)
-         
+          $('#xinwen .thumbnail').eq(x).click(function () {
+          window.location.href = "news-detail.html?" + "id=" + ele.id;
+            })
         
             })
         
