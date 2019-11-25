@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="index.css">
   <script src="../js/jquery.min.js"></script>
   <script src="../js/bootstrap.min.js"></script>
+  <script src="https://cdn.bootcss.com/axios/0.19.0/axios.min.js"></script>
 
 
 </head>
@@ -159,33 +160,54 @@
     <div></div>
     <div>
       <ul>
+        <li ><div >
+          <div class="thumbnail">
+            <img src="" alt="">
+            <div class="caption">
+              <h3>商品名字</h3>
+              <p>商品介绍</p>
+              <span>时间</span>
+            </div>
+          </div>
+        </div>
+         
+        </li>
         <li>
-          <div><img src="../dogpng/xinwen_1.png" alt="">
-            <h3>狗狗的洗脚神器，有了它再也不怕爪子脏了</h3>
-            <p class="xiahuaxian2"></p>
-            <span>每次带家里的小狗出去遛弯，它的小爪子就会弄脏，总用清水洗吧，又感觉洗不干净，而且洗多了，好像脚丫会特别干燥，时间久了都有干裂的倾向，甚至影响狗狗走路。</span>
+          <div >
+            <div class="thumbnail">
+              <img src="" alt="">
+              <div class="caption">
+                <h3>商品名字</h3>
+                <p>商品介绍</p>
+                <span>时间</span>
+              </div>
+            </div>
           </div>
         </li>
         <li>
-          <div><img src="../dogpng/xinwen_2.png" alt="">
-            <h3>加纳利犬，连主人都咬的狗你还敢养吗？</h3>
-            <p class="xiahuaxian2"></p>
-            <span>有人喜欢活泼机灵、娇小可爱的小型犬，自然也会有人喜欢养高大壮硕、凶悍霸气的猛犬，只是有猛犬虽然能带给你安全感，但同时也会让你觉得恐惧不安，比如加纳利犬，这绝对是恐怖级别的大狗狗，素有杀人犬的恶名，甚至连主人都咬。</span>
+          <div >
+            <div class="thumbnail">
+              <img src="" alt="">
+              <div class="caption">
+                <h3>商品名字</h3>
+                <p>商品介绍</p>
+                <span>时间</span>
+              </div>
+            </div>
           </div>
         </li>
         <li>
-          <div><img src="../dogpng/xinwen_3.png" alt="">
-            <h3>吃番茄的狗狗，真的不怕酸啊~~</h3>
-            <p class="xiahuaxian2"></p>
-            <span>一网友在路上看到一只黄色的流浪狗被人驱赶，它非常瘦，估计长期营养不良导致的，今天也不知道多久没吃东西了，饿得连人都不怕了，直接往别人店里走，结果就被轰出来了!</span>
-          </div>
-        </li>
-        <li>
-          <div><img src="../dogpng/xinwen_4.png" alt="">
-            <h3>狗狗长期蹲守在路边，痴等主人</h3>
-            <p class="xiahuaxian2"></p>
-            <span>狗狗是我们人类最好的伙伴，它们非常忠诚，有智商也有情商，一旦认定你，那必定会对你忠心不移。这不，最近刚看了一个泰国的新闻，说是在泰国的某段高速公路旁有一只狗狗在此蹲守了长达半年之久，而且风雨无阻，每天它都会来到这里，静静地等候主人。</span>
-          </div>
+            <div >
+                <div class="thumbnail">
+                  <img src="" alt="">
+                  <div class="caption">
+                    <h3>商品名字</h3>
+                    <p>商品介绍</p>
+                    <span>时间</span>
+                  </div>
+                </div>
+              </div>
+              
         </li>
 
       </ul>
@@ -242,10 +264,28 @@
               else {
                   $('#daohanglie ul').css('position', '');
               }
-              console.log('event', scrollTop, menuTop);
+             
           })
 
       });
+      axios.get('https://lingqule.papamk.com/wp-json/w2w/v1/products')
+        .then(function (res) {
+        var a = res.data;
+        console.log(a);
+        $.each(a, function (x, ele) {
+          $('#xinwen .thumbnail').eq(x).find('img').prop('src', ele.images[0].src)
+          $('#xinwen .thumbnail').eq(x).find('h3').html(ele.name)
+          $('#xinwen .thumbnail').eq(x).find('p').html(ele.short_description_html)
+          $('#xinwen .thumbnail').eq(x).find('span').html(ele.date_created)
+         
+        
+            })
+        
+                
+    
+        
+        
+    })
   </script>
 </body>
 
