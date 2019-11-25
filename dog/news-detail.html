@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>米拉萌犬-新闻内容</title>
+    
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="news-detail.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/axios/0.19.0/axios.min.js"></script>
+
+</head>
+<body>
+    <!--顶部 -->
+    <div id="header">
+      <div id="daohan">
+      <div id="zhuye"> <a href="index.html">
+      <img src="../dogpng/gouwo.png" alt="" id="zhuye2"></a>
+      <div id="zhuye3"><a href="index.html">米拉萌犬</a></div>
+      </div>
+       <ul id="right">
+          <li><a href="about.html"> 关于我们 </a></li>
+          <li><a href="news.html"> 新闻 </a></li>
+          <li><a href="index.html"> 首页 </a></li>
+        </ul>
+    </div></div>
+    
+    <div id="neirong">
+      <h2></h2>
+      <div id="tupian"></div>
+      <p></p>
+         </div>
+  <!-- 底部 -->
+   <div id="foot">
+      <div id="footer">
+        <div>
+          <ul>
+            <li><img src="../dogpng/ditutubiao.png" alt="">
+              <h3>福州市闽侯县闽江学院</h3>
+            </li>
+            <li><a href="mailto:Leryyyyyy@qq.com"><img src="../dogpng/youxiangtubiao.png" alt="">
+                <h3>Leryyyyyy@qq.com</h3>
+              </a></li>
+            <li><a href="tel:400-400-4000"></a><img src="../dogpng/kefutubiao.png" alt="">
+              <h3>400-400-4000</h3></a>
+            </li>
+            <li id="erweima"><a href="#zhuye"><img src="../dogpng/erweima.png" alt="">
+                <h3>米拉萌犬</h3>
+              </a></li>
+            <div class="clear"></div>
+          </ul>
+        </div>
+        <div>
+          <p class="xiahuaxian3"></p>
+        </div>
+        <div id="banquan">
+          <p>版权所有@Leryyyyyy</p>
+        </div>
+      </div>
+    </div>
+    <script>
+    $(function(){
+      var id=parseInt(location.search.split('=')[1]);
+      console.log(id);
+      axios.get('https://lingqule.papamk.com/wp-json/w2w/v1/products/'+id)
+        .then(function(res){
+          var a=res.data;
+          $('#neirong h2').html(a.name);
+          $('#tupian').html(a.description_html);
+          $('#neirong p').html(a.date_created);
+                                      
+                                      
+        }).catch(function(res){
+          console.log('error',res);
+                              
+          }) })
+          </script>
+
+
+</body>
+</html>

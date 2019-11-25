@@ -1,0 +1,155 @@
+.price td {
+    width: 100px;
+}
+
+*{
+       margin: 0;
+       padding: 0;
+   }
+
+.center{
+    text-align: center;
+}
+.divcss5{ text-indent:32px}
+
+
+.clearDiv { 
+    clear: both; 
+    } 
+
+
+
+p:first-letter{
+    font-size: 32px;
+}
+
+table{
+    border-collapse: collapse;   
+}
+
+#header{ 
+    font-family:STXingkai,simsun,Arial;
+    font-size:50px;
+    background-color:#91d5ff;
+    color:white;
+    margin:0 auto;
+    width:100%;
+    text-align: center;
+    height: 100px;
+    line-height: 100px;
+}
+
+#sidebar{
+    width:100% ; 
+  display: table;
+    margin: 0 auto;
+   
+}
+#left{
+    vertical-align: top;
+    display: table-cell;
+    width: 20%;
+    background-color: #bae7ff;
+}
+
+#sidebar2{
+    vertical-align: top;
+   
+    width: 100%;
+    float:left;
+   
+    top: 10px;
+    
+}
+
+#content{
+   
+    background-color: #e6f7ff;
+    width:100%;
+    float:left;
+    display: table-cell;
+}
+
+#kafei{
+    width: 400px;
+}
+
+
+#jiage {
+    margin:0 auto;  
+}
+#jiage .jg td:nth-child(2)::before{
+
+        content: "￥";           
+    
+    }
+   
+
+
+#jiage td{
+    border: 2px solid black;
+    width: 200px;
+    text-align: center;
+}
+
+#xiaotuguige{
+    width: 100px;
+}
+#xiaokafei{
+    width: 40px;
+    padding-top:20px;
+}
+#footer{
+    font-family:STXingkai,simsun,Arial;
+    font-size:20px;
+    background-color:#91d5ff;
+    color:white; margin:0 auto;
+    width:100%;
+    }
+
+#footer {
+    text-align: center;
+    line-height: 64px;
+}
+
+/*导航栏*/
+#sidebar2 ul {
+    list-style-type: none;
+    background-color:#bae7ff ;
+    top: 0;
+    
+    
+}
+
+#sidebar2 ul li a{
+    
+    display:block;
+    width:100%;
+    text-decoration: none;
+    
+}
+#sidebar li {
+    font-family:STXingkai,simsun,Arial;
+    font-size:20px;
+    border-bottom: 1px solid #555;
+    width: 100%;
+}
+.border-bottom0{
+    border-bottom:0px !important;
+}
+li a:hover {
+    background-color: rgb(107, 191, 224);
+    color: white;
+}/*鼠标悬浮切换颜色*/
+li a:active{
+    
+        background-color: rgba(51, 180, 240, 0.8);
+        color:rgb(14, 0, 0);
+    
+}
+.active{
+    
+    background-color: rgba(51, 180, 240, 0.8);
+    color:rgb(14, 0, 0);
+
+}

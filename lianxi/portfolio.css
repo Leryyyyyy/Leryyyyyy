@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+   
+   
+}
+#daohan{
+    height: 100px ;
+    width: 100%;
+    background-color: #8c8c8c;
+    font-size: 20px;
+    overflow: hidden;
+    
+
+}
+#bookpng{
+    
+    width: 70px;
+    margin-left: 100px;
+    margin-top: 15px;
+    float: left;
+   
+}
+#a{
+    text-decoration:none ; 
+    display: inline-block;
+    margin-top: 40px;
+    float: left;
+    color: white;
+    font-size: 30px;
+}
+
+/*导航页*/
+
+#daohan ul{
+    list-style-type: none;
+    vertical-align: middle;
+   
+    background-color: #8c8c8c;
+   
+}
+#daohan ul li{
+    display: inline;
+    float: left;
+    margin-left: 10px;
+    
+}
+#marginr{
+    margin-right: 20px;  
+}
+.disabled {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.6;
+}
+
+#daohan ul li a{
+    color: white;
+    background-color: #8c8c8c;
+    text-align: center;
+    
+   
+}
+#daohan ul li a:hover{
+    background-color: #595959
+}
+#daohan ul li a:active{
+    background-color: #262626;    
+}
+#right{
+    float:right;
+    margin-top:30px;    
+}
+
+
+
+/*图片廊*/
+.xiahuaxian1{
+    border-bottom: 5px solid black;
+    margin: 0 auto; 
+    width: 110px;
+    margin-top: 10px;
+}
+.xiahuaxian2{
+    border-bottom: 5px solid black;
+    margin: 0 auto;
+   width: 100px;
+    margin-top: 10px;
+}
+#content{
+    overflow: hidden;
+    background-color: #d9d9d9;    
+}
+#middle{
+    margin: 0 auto;
+    width: 100%;
+    
+    
+}
+#root {
+    width: 100%;
+    text-align: center;
+}
+#png1{
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+     
+}
+#png2{
+    overflow: hidden;
+    margin: 0 auto;
+    width: 60%;
+}
+
+#png  {
+    margin-left: 0.6%  ;
+    border: 1px solid #ccc;
+    float: left;
+    width: 24%;
+ 
+}
+
+#png :hover {
+    border: 1px solid #777;
+    opacity:0.9;
+}
+
+#png  img {
+    width: 100%;
+    height: auto;
+    width:300;
+     height:200;
+}
+
+#desc {
+    padding: 15px;
+    text-align: center;
+}
+/*底部*/
+#footer{
+    height: 250px ;
+    width: 100%;
+    background-color: #8c8c8c;
+    font-size: 20px;
+    overflow: hidden;
+}
+
+#b {
+   
+        text-decoration:none ; 
+        display: inline-block;
+        margin-top: 60px;
+        margin-left: 60px;
+        width: 70%;
+        color: white;
+        font-size: 30px;
+     
+    }
+#footer  div img {
+     float:right;
+     width: 150px;
+     margin:30px;
+     padding: top -110px;
+     margin-right: 150px;
+
+
+}
+.xiahuaxian3{
+    border-bottom: 2px solid black;
+    margin: 0 auto;
+   width: 200px;
+    margin-top: 10px;
+   
+}
+#footer2{
+    background-color:#8c8c8c ;
+    
+}
+#footer2 h4{
+   
+    color:black;
+    line-height: 50px;
+    height: 50px;
+    font-size: 20px;
+   
+    text-align: center;
+ 
+}
+/*下拉文本*/
+.dropdown {
+   position: relative;
+  
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left:  0;
+    z-index: 99999999;
+    min-width: 100px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   
+}/*下拉文本框*/
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+/*下拉文本*/
+.dropdown-content a:hover
+ {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
